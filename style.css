@@ -114,6 +114,35 @@ a{
     margin: auto;
     margin-bottom: 40px;
     padding: 0%;
+    nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Responsivo (telas menores) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none; /* escondemos o menu padrão */
+    flex-direction: column;
+    background: #f0f0f0;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+  }
+
+  nav ul.active {
+    display: flex; /* aparece quando clica no menu-toggle */
+  }
+}
 
 }
 
